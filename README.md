@@ -38,3 +38,15 @@ O ambiente precisa permitir o domínio da API. Se a rede estiver bloqueada, use 
 ## Probabilidade
 
 Para uma aposta simples, acertar todos os números equivale a 1 em 50.063.860 na Mega-Sena e 1 em 3.268.760 na Lotofácil. O relatório também exibe a probabilidade exata de cada quantidade de acertos que gera prêmio na modalidade.
+
+## Gerar executável
+
+No Linux, instale o PyInstaller no ambiente virtual e execute:
+
+```bash
+python -m pip install pyinstaller
+./build_executable.sh
+./dist/lottery-analyzer --help
+```
+
+O binário Linux fica em `dist/lottery-analyzer`. Para gerar um `.exe` do Windows, execute a ação **Build executables** no GitHub Actions e baixe o artefato `lottery-analyzer-windows`; o workflow compila cada formato no sistema operacional correspondente.
